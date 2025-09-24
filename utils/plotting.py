@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
+import pandas as pd
 mpl.rcParams.update(mpl.rcParamsDefault)
 
 def plot_sigma_prf(smiles, prf_tensor, savepath=None):
@@ -68,3 +69,14 @@ def plot_binary_lng(x1_list, temperature, ln_gamma_1, ln_gamma_2, smiles_1, smil
     if savepath:
         plt.savefig(savepath, dpi=300, bbox_inches="tight")
     plt.show()
+
+def make_binary_df(x1_list, ln_gamma_1, ln_gamma_2, smiles_1, smiles_2, temperature):
+    df = pd.DataFrame({
+        "smiles_1": smiles_1,
+        "smiles_2": smiles_2,
+        "temperature (K)": temperature,
+        "x1": x1_list,
+        "ln_gamma_1": ln_gamma_1,
+        "ln_gamma_2": ln_gamma_2
+    })
+    return df
