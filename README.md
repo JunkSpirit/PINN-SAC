@@ -64,10 +64,12 @@ This notebook demonstrates how to:
 
 If you use this project in your research, please cite:
 
-Yue Yang, Shiang-Tai Lin*
-*Physics-Embedded Machine Learning Model for Phase Equilibrium Prediction in Multicomponent Systems*  
-*Journal of Chemical Information and Modeling*, 2025  
-DOI: [10.1021/acs.jcim.5c01804](https://doi.org/10.1021/acs.jcim.5c01804)
+**Direct Copy:**  
+
+Yue Yang, Shiang-Tai Lin. Physics-Embedded Machine Learning Model for Phase Equilibrium Prediction in Multicomponent Systems. Journal of Chemical Information and Modeling, 2025. DOI: 10.1021/acs.jcim.5c01804
+
+**With Link:**  
+Yue Yang, Shiang-Tai Lin. *[Physics-Embedded Machine Learning Model for Phase Equilibrium Prediction in Multicomponent Systems](https://doi.org/10.1021/acs.jcim.5c01804)*. *Journal of Chemical Information and Modeling*, 2025. DOI: 10.1021/acs.jcim.5c01804
 
 ## References
 
