@@ -21,6 +21,8 @@ This project provides:
 
 ## Installation via PyPI
 
+If you only need to use TeNNet-SAC, we recommand installing it directly from PyPI.
+
 Create a new environment and install the package:
 
 ```bash
@@ -43,9 +45,9 @@ lng1_list, lng2_list = binary_lng(["CCO", "ClCCCl"], 298.15, [0.0, 0.25, 0.5, 0.
 lng1, lng2, lng3 = multi_lng(["CCO", "ClCCCl", "CCN"], 298.15, [0.3, 0.4])
 ```
 
-## Installation
+## Installation from Source
 
-Clone the repository:
+If you want to modify or develop TeNNet-SAC locally, clone the repository and build from source:
 
 ```bash
 git clone https://github.com/yueyue2299/TeNNet-SAC.git
