@@ -19,6 +19,29 @@ This project provides:
 - Modular design: supports use of σ-profiles from QC calculations  
 - Robust and generalizable via two-stage training: synthetic COSMO-SAC pretraining followed by experimental fine-tuning, preserving physical consistency
 
+## Installation via PyPI
+
+Create an environment and install package:
+
+```bash
+conda create -n tsac_env python=3.10 -y
+pip install tennetsac
+```
+Once installed, you can directly import and use TeNNet-SAC in Python:
+
+```python
+from tennetsac import profile, binary_lng, multi_lng
+
+# Example 1: Generate σ-profile
+s_profile, area, volume = profile("CCO")  # ethanol
+
+# Example 2: Predict activity coefficient for a binary mixture
+lng1_list, lng2_list = binary_lng(["CCO", "ClCCCl"], 298.15, [0.0, 0.25, 0.5, 0.75, 1.0])
+
+# Example 3: Predict for multicomponent systems
+lng1, lng2, lng3 = multi_lng(["CCO", "ClCCCl", "CCN"], 298.15, [0.3, 0.4])
+```
+
 ## Installation
 
 Clone the repository:
