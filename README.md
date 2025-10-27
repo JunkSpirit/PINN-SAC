@@ -21,10 +21,11 @@ This project provides:
 
 ## Installation via PyPI
 
-Create an environment and install package:
+Create a new environment and install the package:
 
 ```bash
 conda create -n tsac_env python=3.10 -y
+conda activate tsac_env
 pip install tennetsac
 ```
 Once installed, you can directly import and use TeNNet-SAC in Python:
