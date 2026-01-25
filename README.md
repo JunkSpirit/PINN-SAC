@@ -45,6 +45,10 @@ lng1_list, lng2_list = binary_lng(["CCO", "ClCCCl"], 298.15, [0.0, 0.25, 0.5, 0.
 lng1, lng2, lng3 = multi_lng(["CCO", "ClCCCl", "CCN"], 298.15, [0.3, 0.4])
 ```
 
+### Quick Tutorial in Colab
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1plBLQIqTAEglNpi3GqOs5TYYZHp5tLny?usp=sharing)
+
+
 ## Installation from Source
 
 If you want to modify or develop TeNNet-SAC locally, clone the repository and build from source:
