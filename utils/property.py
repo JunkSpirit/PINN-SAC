@@ -159,3 +159,6 @@ def calc_ln_gamma_binary(smiles_1, smiles_2, x1_list, temperature,
         ln_gamma_2_list.append(ln_gamma_2)
 
     return np.array(ln_gamma_1_list), np.array(ln_gamma_2_list)
+
+
+# test
