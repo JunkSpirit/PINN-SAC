@@ -44,6 +44,34 @@ lng1_list, lng2_list = binary_lng(["CCO", "ClCCCl"], 298.15, [0.0, 0.25, 0.5, 0.
 # Example 3: Predict for multicomponent systems
 lng1, lng2, lng3 = multi_lng(["CCO", "ClCCCl", "CCN"], 298.15, [0.3, 0.4])
 ```
+You can fit temperature-dependent NRTL parameters based on TeNNet-SAC predictions.
+
+```python
+import tennetsac as tsac
+
+# ==== Input ====
+smiles_1 = "CCO"
+smiles_2 = "ClCCCl"
+temperature_range = [300, 350, 400]  # Kelvin
+x_points = 21
+# ================
+
+nrtl_results = tsac.fit_nrtl(
+    smiles_1,
+    smiles_2,
+    alpha=0.3,
+    temp_range=temperature_range,
+    x_points=x_points
+)
+
+print(nrtl_results)
+```
+To evaluate the fitting quality:
+
+```python
+tsac.plot_nrtl_fitting(smiles_1, smiles_2, nrtl_results)
+```
+**Note**: The non-randomness parameter (α) must be selected based on the thermodynamic characteristics of the system (default: 0.3).
 
 ### Quick Tutorial in Colab
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1plBLQIqTAEglNpi3GqOs5TYYZHp5tLny?usp=sharing)
