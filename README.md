@@ -47,7 +47,7 @@ lng1, lng2, lng3 = multi_lng(["CCO", "ClCCCl", "CCN"], 298.15, [0.3, 0.4])
 You can fit temperature-dependent NRTL parameters based on TeNNet-SAC predictions.
 
 ```python
-import tennetsac as tsac
+from tennetsac import fit_nrtl, plot_nrtl_fitting
 
 # ==== Input ====
 smiles_1 = "CCO"
@@ -56,7 +56,7 @@ temperature_range = [300, 350, 400]  # Kelvin
 x_points = 21
 # ================
 
-nrtl_results = tsac.fit_nrtl(
+nrtl_results = fit_nrtl(
     smiles_1,
     smiles_2,
     alpha=0.3,
@@ -66,10 +66,32 @@ nrtl_results = tsac.fit_nrtl(
 
 print(nrtl_results)
 ```
-To evaluate the fitting quality:
+example output:
+```
+{
+  'parameters': {
+      'AIJ': 0.0111,
+      'AJI': -1.0671,
+      'BIJ': 170.582,
+      'BJI': 685.029,
+      'Alpha': 0.3
+  },
+  'fitting_metrics': {
+      'RMSE': 0.027034,
+      'Max_Abs_Error': 0.134795,
+      'Success': True
+  },
+  'input_info': {
+      'Component_i': 'CCO',
+      'Component_j': 'ClCCCl',
+      'Temp_Range_K': [300, 350, 400]
+  }
+}
+```
+To evaluate the fitting quality visually:
 
 ```python
-tsac.plot_nrtl_fitting(smiles_1, smiles_2, nrtl_results)
+plot_nrtl_fitting(smiles_1, smiles_2, nrtl_results)
 ```
 **Note**: The non-randomness parameter (α) must be selected based on the thermodynamic characteristics of the system (default: 0.3).
 
