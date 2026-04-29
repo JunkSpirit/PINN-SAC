@@ -49,19 +49,12 @@ You can fit temperature-dependent NRTL parameters based on TeNNet-SAC prediction
 ```python
 from tennetsac import fit_nrtl, plot_nrtl_fitting
 
-# ==== Input ====
-smiles_1 = "CCO"
-smiles_2 = "ClCCCl"
-temperature_range = [300, 350, 400]  # Kelvin
-x_points = 21
-# ================
-
 nrtl_results = fit_nrtl(
-    smiles_1,
-    smiles_2,
+    "CCO",
+    "ClCCCl",
     alpha=0.3,
-    temp_range=temperature_range,
-    x_points=x_points
+    temp_range=[300, 350, 400],  # Kelvin
+    x_points=21
 )
 
 print(nrtl_results)
@@ -91,7 +84,7 @@ example output:
 To evaluate the fitting quality visually:
 
 ```python
-plot_nrtl_fitting(smiles_1, smiles_2, nrtl_results)
+plot_nrtl_fitting("CCO", "ClCCCl", nrtl_results)
 ```
 **Note**: The non-randomness parameter (α) must be selected based on the thermodynamic characteristics of the system (default: 0.3).
 
