@@ -7,6 +7,7 @@ class ChemBERTaEmbedder:
     def __init__(self, model_name="DeepChem/ChemBERTa-77M-MLM", max_length=128, device="cpu"):
         self.tokenizer = RobertaTokenizer.from_pretrained(model_name)
         self.model = RobertaModel.from_pretrained(model_name).to(device)
+        self.model.eval()
         self.max_length = max_length
         self.device = device
 
